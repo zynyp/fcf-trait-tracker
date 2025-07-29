@@ -1,0 +1,1 @@
+export type CardType = "IDENTITY" | "OCCUPATION" | "SKILL" | "FAVOURITE_FOOD" | "ACCESSORY";

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Add a title element to include a proper site title in the browser tab -->
+        <title>🔍 Friendly (Camp) Fire Trait Tracker</title>
+
+        <!-- Add link elements for favicon (image beside the site title) -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="favicon.png">
+
+        <meta name="application-name" content="Friendly (Camp) Fire Trait Tracker">
+        <meta name="description" content="Track your traits between your friends in Friendly (Camp) Fire.">
+
+        <!-- Meta elements to properly display a real description and title on search engines -->
+        <meta name="author" content="Zong Yang">
+        <meta name="creator" content="Zong Yang">
+        <meta name="copyright" content="Zong Yang">
+        <meta name="publisher" content="Netlify">
+
+        <!-- Meta elements for Open Graph Protocol (used by websites like Facebook to display the site's link preview) -->
+        <meta property="og:title" content="Friendly (Camp) Fire Trait Tracker">
+        <meta property="og:description" content="Track your traits between your friends in Friendly (Camp) Fire.">
+        <meta property="og:url" content="https://trait-tracker.netlify.app/">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://trait-tracker.netlify.app/promo.png">
+
+        <!-- Meta elements for Twitter to display the site's link preview -->
+        <meta name="twitter:title" content="Friendly (Camp) Fire Trait Tracker">
+        <meta name="twitter:description" content="Track your traits between your friends in Friendly (Camp) Fire.">
+        <meta name="twitter:image" content="https://trait-tracker.netlify.app/promo.png">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta name="mobile-web-app-cable" content="yes">
+        <meta name="apple-mobile-web-app-cable" content="yes">
+
+        <meta name="referrer" content="same-origin"> <!-- Removes the "Referer" HTTP request header from all cross-site (to third-party websites) requests, which can be used to identify where you came from those websites -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self';"> <!-- Checks what the site can run and fetch from, especially third-party websites, for security reasons TODO: remember to remove 'unsafe-inline' for submission -->
+
+        <meta name="robots" content="nofollow, noimageindex"> <!-- Do not allow "robots" (automated bots) to associate or connect any links shown on the website (nofollow). Do not show any images from this website on search engines (noimageindex) -->
+    </head>
+    <body class="w-full text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-slate-900">
+        <header>
+            <h1 class="my-[min(max(0.6rem,_3dvw),_1.8rem)] text-[min(max(1.6rem,_7dvw),_4rem)] font-black text-center">🔍 Friendly (Camp) Fire Trait Tracker</h1>
+            <p class="my-2 font-medium text-center">Click the boxes to mark the color of each type of card.</p>
+        </header>
+
+        <main class="flex flex-col gap-6 items-center px-4 w-full"></main>
+
+        <footer>
+            <a class="inline-block my-4 w-full hover:text-lg text-center transition-[font-size]" href="https://github.com/zynyp/fcf-trait-tracker" target="_blank" rel="noopener">Link to Repository</a>
+        </footer>
+
+        <script type="module" src="src/index.tsx"></script>
+    </body>
+</html>

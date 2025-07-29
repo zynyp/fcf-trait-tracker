@@ -1,0 +1,24 @@
+{
+  "name": "fcf-trait-tracker",
+  "description": "Track your traits between your friends in Friendly (Camp) Fire",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Zong Yang",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.5",
+    "tailwindcss": "^4.0.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "typescript": "~5.7.3",
+    "vite": "^6.2.0",
+    "vite-plugin-solid": "^2.11.6"
+  }
+}

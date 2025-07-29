@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Kalam";
+    src: url("fonts/Kalam/regular.ttf");
+}
