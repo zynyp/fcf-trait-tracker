@@ -37,9 +37,9 @@ export default function Checkbox(props: CheckboxProps) {
 
     const cardTypeName = createMemo(() => {
         switch (cardType) {
-            case "IDENTITY": return "Identity";
+            case "IDENTITY": return "Animal Identity";
             case "OCCUPATION": return "Occupation";
-            case "SKILL": return "Skill";
+            case "SKILL": return "Intelligence Skill";
             case "FAVOURITE_FOOD": return "Favourite Food";
             case "ACCESSORY": return "Accessory";
         }
