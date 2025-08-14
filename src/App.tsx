@@ -4,8 +4,8 @@ import { Legend, Player } from "./components";
 export default function App() {
     return (
         <>
-            <section>
-                <h2 class="py-2 font-bold text-2xl text-center">Legend</h2>
+            <section class="flex flex-col gap-2 items-center px-4 w-full">
+                <h2 class="font-bold text-2xl text-center">Legend</h2>
                 <Legend />
             </section>
 

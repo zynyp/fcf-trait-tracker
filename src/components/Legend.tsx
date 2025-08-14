@@ -7,7 +7,7 @@ import { CARD_TYPES } from "../types";
 export default function Legend() {
     return (
         <>
-            <dl class="grid grid-cols-3 gap-2">
+            <dl class="grid grid-cols-3 gap-2 max-w-120">
                 <For each={CARD_TYPES}>
                     {(type) => {
                         const name = cardTypeNames[type];
