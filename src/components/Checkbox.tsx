@@ -1,15 +1,28 @@
-import { createMemo, createSignal } from "solid-js";
+import { createMemo, createSignal, Show } from "solid-js";
+
+import { cardTypeNames } from "../data";
 import type { Color, CardType } from "../types";
 
 interface CheckboxProps {
     id: string;
     cardType: CardType,
 
+    isClickable?: boolean;
+    showLabel?: boolean;
+
     onChange?(color: Color, prevColor: Color): any;
 }
 
 export default function Checkbox(props: CheckboxProps) {
-    const { id, cardType, onChange = () => {} } = props;
+    const {
+        id,
+        cardType,
+
+        isClickable = true,
+        showLabel = true,
+
+        onChange = () => {}
+    } = props;
 
     const labelId = createMemo(() => `label-${id}`);
 
@@ -35,15 +48,7 @@ export default function Checkbox(props: CheckboxProps) {
         }
     });
 
-    const cardTypeName = createMemo(() => {
-        switch (cardType) {
-            case "IDENTITY": return "Animal Identity";
-            case "OCCUPATION": return "Occupation";
-            case "SKILL": return "Intelligence Skill";
-            case "FAVOURITE_FOOD": return "Favourite Food";
-            case "ACCESSORY": return "Accessory";
-        }
-    });
+    const cardTypeName = cardTypeNames[cardType];
 
     function onClick() {
         const prevColor = color();
@@ -72,9 +77,12 @@ export default function Checkbox(props: CheckboxProps) {
     }
 
     return (
-        <div class="inline-block px-1 md:px-2" onClick={onClick}>
-            <p id={labelId()} class="block my-1 text-sm font-medium text-center select-none">{colorName()}</p>
-            <p class={`w-9 h-9 font-bold text-center text-gray-100 rounded-lg border-4 transition-[background-color,_border-color] appearance-none select-none ${colorCSSClass()}`} title={`${cardTypeName()} Checkbox`} tabindex={0} role="checkbox" aria-checked={color() !== "NONE"} aria-labelledby={labelId()} onKeyDown={({ code, target }) => code === "Enter" && (target as HTMLInputElement).click()}>{cardType[0]}</p>
+        <div class="inline-block px-1 md:px-2" onClick={isClickable ? onClick : () => {}}>
+            <Show when={showLabel}>
+                <p id={labelId()} class="block my-1 text-sm font-medium text-center select-none">{colorName()}</p>
+            </Show>
+
+            <p class={`w-9 h-9 font-bold text-center text-gray-100 rounded-lg border-4 transition-[background-color,_border-color] appearance-none select-none ${colorCSSClass()}`} title={`${cardTypeName} Checkbox`} tabindex={0} role="checkbox" aria-checked={color() !== "NONE"} aria-labelledby={labelId()} onKeyDown={({ code, target }) => code === "Enter" && (target as HTMLInputElement).click()}>{cardType[0]}</p>
         </div>
     );
 }

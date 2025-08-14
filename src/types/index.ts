@@ -1,2 +1,2 @@
 export type { Color } from "./Color";
-export type { CardType } from "./CardType";
+export { type CardType, CARD_TYPES } from "./CardType";

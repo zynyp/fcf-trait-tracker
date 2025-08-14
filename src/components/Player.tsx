@@ -1,9 +1,7 @@
 import { createSignal, For } from "solid-js";
 
 import { Checkbox, Counter, Label } from ".";
-import type { CardType, Color } from "../types";
-
-const CARD_TYPES: CardType[] = ["IDENTITY", "OCCUPATION", "SKILL", "FAVOURITE_FOOD", "ACCESSORY"];
+import { CARD_TYPES, type Color } from "../types";
 
 interface PlayerProps { key: string; }
 export default function Player(props: PlayerProps) {

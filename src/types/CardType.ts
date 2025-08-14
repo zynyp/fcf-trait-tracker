@@ -1,1 +1,2 @@
 export type CardType = "IDENTITY" | "OCCUPATION" | "SKILL" | "FAVOURITE_FOOD" | "ACCESSORY";
+export const CARD_TYPES: CardType[] = ["IDENTITY", "OCCUPATION", "SKILL", "FAVOURITE_FOOD", "ACCESSORY"];
